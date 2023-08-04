@@ -15,13 +15,28 @@ const WheatherInfo = ({info}) => {
     {
       info.city ? 
       <div className='card'>
-        <p>Temperature : {info.temperature} °C</p>
-        <p>Temperature max : {info.temperature_max} °C</p>
-        <p>Temperature min : {info.temperature_min} °C</p>
-        <p>Humidity: {info.humidity} %</p>
-        <p>Description : {info.description}</p>
-        <p>City: {info.city}</p>
-        <p>County: {info.country}</p>
+        {
+          info.temperature && info.temperature_max && info.temperature_min && 
+          <p>Temperature : {info.temperature} °C <br /> Max : {info.temperature_max} °C |  Min : {info.temperature_min} °C</p>
+          
+        }
+        {
+          info.humidity &&
+          <p>Humidity: {info.humidity} %</p>
+
+        }
+        
+        {
+          info.description&& <p>Description : {info.description}</p>
+        }
+
+        {
+          info.city && info.country &&
+          <p>City: {info.city}, County: {info.country}</p>
+
+        }
+        
+      
 
       </div> : 
       <div >
