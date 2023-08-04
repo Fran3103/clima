@@ -17,7 +17,7 @@ const WheatherForm = ({getWheather  }) => {
 
 // }
   return (
-    <div className='card card-body ' >
+    <div className='card card-body mb-4' >
         <form onSubmit={getWheather}>
             <div className="form-group p-3">
                 <input type="text" name='citys' placeholder='Ingrese Ciudad' className='form-control' autoFocus />
