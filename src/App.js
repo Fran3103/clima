@@ -59,11 +59,11 @@ function App() {
           setInfo(info)
         })
           } else {
-            setInfo({error: 'ingrese pais'})
+            setInfo({error: 'ingrese Ciudad y Pais'})
         }
        
       
-      }, [apiUrl])
+      }, [apiUrl, city , country])
       
       
 
