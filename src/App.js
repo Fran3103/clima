@@ -59,9 +59,9 @@ function App() {
           setInfo(info)
         })
           } if (apiUrl === null) {
-            setInfo({error: 'ingrese Ciudad y Pais'})
+            setInfo({error: 'Ingrese Ciudad y Pais'})
           }  else {
-            setInfo({error: 'ingrese Ciudad y Pais'})
+            setInfo({error: 'Ingrese Ciudad y Pais'})
         }
        
       
