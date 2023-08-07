@@ -2,8 +2,14 @@
   text-align: center;
 }
 
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  margin-top: 30px;
+}
+
 .card{
-  margin-top: 100px;
+  margin-top: 60px;
   
 }
 
@@ -14,14 +20,13 @@
 
 .descrip{
 
-  display: grid;
-  grid-template-columns: 1fr 3fr ;
-  grid-template-rows: 1fr;
+  display: flex;
+  
   padding: 10px 30px;
   gap: 20px;
-  align-content: center;
-  justify-content: center;
-  
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .descrip p {
@@ -31,32 +36,36 @@
 
 }
 
+h2{
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+
 span {
   font-size: 0.8rem;
-}
-
-i{
-  font-size: 1.4rem;
-  text-align: start;
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
 
-.text{
+
+
+
+
+.descrip2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.descrip3{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px auto;
+  gap: 10px;
+  
 }
 
-
-
-.firtIcon{
-  margin-top: 8px;
-}
-
-.secondIcon{
-  font-size: 2rem;
-  margin-top: -15px;
-  margin-left: -6px;
+.descrip3 p{
+  margin-top: 20px;
 }
