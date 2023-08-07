@@ -1,4 +1,8 @@
 import React from 'react'
+import { BsThermometerSun} from "react-icons/bs";
+import { WiHumidity} from "react-icons/wi";
+import { TfiInfoAlt } from "react-icons/tfi";
+import { GoLocation } from "react-icons/go";
 
 const WheatherInfo = ({info}) => {
   
@@ -14,25 +18,40 @@ const WheatherInfo = ({info}) => {
 
     {
       info.city ? 
-      <div className='card'>
+      <div className='card info'>
         {
           info.temperature && info.temperature_max && info.temperature_min && 
-          <p>Temperature : {info.temperature} °C <br /> Max : {info.temperature_max} °C |  Min : {info.temperature_min} °C</p>
+          <div className="descrip">
+            <i className='firtIcon'><BsThermometerSun/> </i> 
+          <p> Temperature : {info.temperature} °C <br /> <span>Max : {info.temperature_max} °C |  Min : {info.temperature_min} °C</span></p>
+          </div>
           
         }
         {
           info.humidity &&
-          <p>Humidity: {info.humidity} %</p>
+          <div className="descrip">
+           <i className='secondIcon' ><WiHumidity/></i> 
+        
+          <p>   Humidity: {info.humidity} %</p>
+          
+          </div>
 
         }
         
         {
-          info.description&& <p>Description : {info.description}</p>
+          info.description&& 
+          <div className="descrip">
+           <i><TfiInfoAlt/></i> 
+            <p>   Description : {info.description}</p>
+            </div>
         }
 
         {
           info.city && info.country &&
-          <p>City: {info.city}, County: {info.country}</p>
+          <div className="descrip">
+           <i><GoLocation/></i> 
+          <p>    City: {info.city}, County: {info.country}</p>
+          </div>
 
         }
         

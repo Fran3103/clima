@@ -37,7 +37,7 @@ function App() {
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${keys}&units=metric`
       
       useEffect(() => {
-       if (city && country ){ 
+       if (city && country && apiUrl){ 
           
           fetch(apiUrl)
           .then(response =>  response.json() )
@@ -58,7 +58,9 @@ function App() {
               }
           setInfo(info)
         })
-          } else {
+          } if (apiUrl === null) {
+            setInfo({error: 'ingrese Ciudad y Pais'})
+          }  else {
             setInfo({error: 'ingrese Ciudad y Pais'})
         }
        
